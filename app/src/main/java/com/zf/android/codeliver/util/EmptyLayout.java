@@ -47,7 +47,7 @@ public class EmptyLayout extends RelativeLayout {
      */
     private void initView(Context context,AttributeSet attrs) {
         this.context = context;
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.EmtryLayout);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.EmptyLayout);
         errorDrawable = a.getResourceId(R.styleable.EmptyLayout_errorDrawable, -1);
         noDateDrawable = a.getResourceId(R.styleable.EmptyLayout_noDataDrawable, -1);
         if (errorDrawable == -1 && noDateDrawable == -1 ) throw new IllegalArgumentException("please set errorDrawable or noDateDrawable in your xml");

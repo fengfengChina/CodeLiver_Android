@@ -21,7 +21,7 @@ public abstract class BaseActivity<T extends BasePresenter> extends Activity {
         initPresenter();
     }
 
-    protected abstract void initPresenter();
+    protected  abstract void initPresenter();
 
     protected abstract int getLayoutResId();
 
