@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.zf.android.codeliver.MainActivity"
-    tools:showIn="@layout/activity_main">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text"/>
+  <com.zf.android.codeliver.util.EmtryLayout
+      android:id="@+id/emtry_main_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:errorDrawable="@mipmap/ic_launcher"
+      app:noDataDrawble="@mipmap/ic_launcher"
+      >
 
-</android.support.v4.widget.NestedScrollView>
+    <android.support.v7.widget.RecyclerView
+       android:id="@+id/rv_main_active"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+  </com.zf.android.codeliver.util.EmtryLayout>
+</LinearLayout>
