@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.zf.android.codeliver.BaseActivity;
 import com.zf.android.codeliver.BaseListView;
 import com.zf.android.codeliver.R;
-import com.zf.android.codeliver.util.EmtryLayout;
+import com.zf.android.codeliver.util.EmptyLayout;
 
 import java.util.List;
 
@@ -27,7 +27,7 @@ public class WelcomeActivity extends BaseActivity<WelcomePresenter> implements B
     RecyclerView rvMainActive;
     WelcomePresenter welcomePresenter;
     @Bind(R.id.emtry_main_layout)
-    EmtryLayout emtryMainLayout;
+    EmptyLayout emtryMainLayout;
 
     @Override
     protected void initPresenter() {
@@ -42,17 +42,17 @@ public class WelcomeActivity extends BaseActivity<WelcomePresenter> implements B
 
     @Override
     public void showProgressBar() {
-        emtryMainLayout.setState(EmtryLayout.State.LOADING);
+        emtryMainLayout.setState(EmptyLayout.State.LOADING);
     }
 
     @Override
     public void hideProgressBar() {
-        emtryMainLayout.setState(EmtryLayout.State.NOMAL,rvMainActive);
+        emtryMainLayout.setState(EmptyLayout.State.NOMAL,rvMainActive);
     }
 
     @Override
     public void showErrorView() {
-        emtryMainLayout.setState(EmtryLayout.State.ERROR);
+        emtryMainLayout.setState(EmptyLayout.State.ERROR);
     }
 
     @Override
@@ -73,7 +73,7 @@ public class WelcomeActivity extends BaseActivity<WelcomePresenter> implements B
 
     @Override
     public void initView() {
-        emtryMainLayout.setEmtryListner(new EmtryLayout.EmtryListner() {
+        emtryMainLayout.setEmtryListner(new EmptyLayout.EmtryListner() {
             @Override
             public void onNoDataClick() {
                 Toast.makeText(WelcomeActivity.this,"onNoDataClick",Toast.LENGTH_LONG).show();

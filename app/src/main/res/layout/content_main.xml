@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-  <com.zf.android.codeliver.util.EmtryLayout
+  <com.zf.android.codeliver.util.EmptyLayout
       android:id="@+id/emtry_main_layout"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
@@ -18,5 +18,5 @@
        android:id="@+id/rv_main_active"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"/>
-  </com.zf.android.codeliver.util.EmtryLayout>
+  </com.zf.android.codeliver.util.EmptyLayout>
 </LinearLayout>

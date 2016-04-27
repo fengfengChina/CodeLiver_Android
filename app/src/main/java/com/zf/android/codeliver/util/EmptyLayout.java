@@ -13,7 +13,7 @@ import com.zf.android.codeliver.R;
 /**
  * Created by zengfeng on 16/4/27.
  */
-public class EmtryLayout extends RelativeLayout {
+public class EmptyLayout extends RelativeLayout {
     private ImageView errorView;
     private ImageView noDateView;
     private View loadingView;
@@ -29,15 +29,15 @@ public class EmtryLayout extends RelativeLayout {
         LOADING,NODATA,ERROR,NOMAL
     }
 
-    public EmtryLayout(Context context) {
+    public EmptyLayout(Context context) {
         super(context);
     }
-    public EmtryLayout(Context context, AttributeSet attrs) {
+    public EmptyLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView(context,attrs);
     }
 
-    public EmtryLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public EmptyLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initView(context,attrs);
     }
@@ -48,8 +48,8 @@ public class EmtryLayout extends RelativeLayout {
     private void initView(Context context,AttributeSet attrs) {
         this.context = context;
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.EmtryLayout);
-        errorDrawable = a.getResourceId(R.styleable.EmtryLayout_errorDrawable, -1);
-        noDateDrawable = a.getResourceId(R.styleable.EmtryLayout_noDataDrawble, -1);
+        errorDrawable = a.getResourceId(R.styleable.EmptyLayout_errorDrawable, -1);
+        noDateDrawable = a.getResourceId(R.styleable.EmptyLayout_noDataDrawable, -1);
         if (errorDrawable == -1 && noDateDrawable == -1 ) throw new IllegalArgumentException("please set errorDrawable or noDateDrawable in your xml");
         initErrorView();
         initNoDataView();
